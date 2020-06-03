@@ -1,0 +1,680 @@
+@charset "UTF-8";
+/*
+Theme Name: site-name
+Theme URI: tkjunichi_@
+Author: JUNICHI TAKABATAKE
+Description:  オリジナルテーマ
+Version: 1.0.0
+*/
+/* --------------------------------------------------
+    0. Resetting default margin and padding
+-------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* --------------------------------
+* anchor
+* -------------------------------- */
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* --------------------------------
+* table
+* -------------------------------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* --------------------------------
+* button
+* -------------------------------- */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* --------------------------------
+* img
+* -------------------------------- */
+img {
+  border: none;
+  border-style: none;
+  height: auto;
+  max-height: 100%;
+  vertical-align: top;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* --------------------------------
+* list
+* -------------------------------- */
+li,
+ol {
+  list-style: none;
+  list-style-type: none;
+}
+
+/* //////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+[Base] 
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////// */
+/* --------------------------------
+*  html, body
+* -------------------------------- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e6e7ee;
+  color: #00244d;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* --------------------------------
+*  inner
+* -------------------------------- */
+.wrapper {
+  overflow: hidden;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .inner {
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inner {
+    padding: 0 16px;
+  }
+}
+
+.s_inner {
+  width: 960px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .s_inner {
+    margin: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .s_inner {
+    margin: 0 16px;
+  }
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.u-flex-bet {
+  justify-content: space-between;
+}
+
+.u-flex-center {
+  justify-content: center;
+}
+
+.u-flex-none {
+  display: block !important;
+}
+
+.u-under-line {
+  background: linear-gradient(transparent 70%, #e5bb09);
+}
+
+.u-content-area {
+  padding-bottom: 40px;
+}
+
+/* 改行設定 */
+.sp-br {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sp-br {
+    display: block;
+  }
+}
+/* //////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+[module] 
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////// */
+.mod-header-main {
+  background-color: #e6e7ee;
+  color: #00244d;
+  padding: 20px 0;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .mod-header-main {
+    margin: 0 auto;
+    padding: 14px 0;
+  }
+}
+.mod-header-main__logo > a {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .mod-header-main__logo > a {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+.mod-header-main__description {
+  font-size: 1.125rem;
+  padding: 21px 0;
+  margin: 0 auto 0 20px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 1199px) {
+  .mod-header-main__description {
+    font-size: 1rem;
+    padding: 18px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mod-header-main__description {
+    display: none;
+  }
+}
+
+/* Javascriptを有効にしていない場合に表示 */
+noscript p {
+  background-color: lightblue;
+  font-size: 0.875rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.mod-header-nav {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .mod-header-nav {
+    display: none;
+  }
+}
+.mod-header-nav__list {
+  transform: skew(-25deg);
+}
+.mod-header-nav__list .-item {
+  border-right: solid 2px #00244d;
+  text-align: center;
+  width: calc(100% / 5);
+}
+.mod-header-nav__list .-item:last-child {
+  border-right: none;
+}
+.mod-header-nav__list .-item a {
+  text-transform: capitalize;
+  transform: skew(25deg);
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 10px 0;
+  text-decoration: none;
+}
+.mod-header-nav__list .-item a:hover {
+  opacity: 0.6;
+}
+
+/* --------------------------------
+* DRAWER
+* -------------------------------- */
+@media screen and (max-width: 767px) {
+  .mod-drawer-nav__btn {
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    width: 44px;
+    /* クリックしやすいようにちゃんと幅を指定する */
+    height: 44px;
+    /* クリックしやすいようにちゃんと高さを指定する */
+    cursor: pointer;
+    z-index: 300;
+    padding: 4px;
+  }
+  .mod-drawer-nav .button-line {
+    position: absolute;
+    left: 9px;
+    width: 26px;
+    height: 2px;
+    background-color: #00244d;
+    transition: all 0.3s;
+  }
+  .mod-drawer-nav .button-line--1 {
+    top: 10px;
+  }
+  .mod-drawer-nav .button-line--2 {
+    top: 20px;
+  }
+  .mod-drawer-nav .button-line--3 {
+    top: 30px;
+  }
+  .mod-drawer-nav__bg--Black {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .mod-drawer-nav__content {
+    position: fixed;
+    right: -276px;
+    /* これで隠れる */
+    top: 0;
+    width: 276px;
+    /* スマホに収まるくらい */
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all 0.3s;
+    z-index: 200;
+    overflow-y: auto;
+    /* メニューが多くなったらスクロールできるように */
+  }
+  .mod-drawer-nav__list .-item {
+    text-align: center;
+    padding: 0 14px;
+  }
+  .mod-drawer-nav__list .-item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #111;
+  }
+  .mod-drawer-nav__list .-item a:hover {
+    background-color: #eee;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mod-drawer-nav {
+    display: none;
+  }
+}
+
+body.is-active-drawer--open {
+  overflow: hidden;
+}
+
+.is-active-drawer--open .button-line--1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.is-active-drawer--open .button-line--2 {
+  width: 0;
+  left: 50%;
+}
+.is-active-drawer--open .button-line--3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+.is-active-drawer--open .mod-drawer-nav__content {
+  right: 0;
+}
+.is-active-drawer--open .mod-drawer-nav__bg--Black {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/* --------------------------------
+* top-scroll
+* -------------------------------- */
+.el-page-top {
+  align-items: center;
+  background: #e6e7ee;
+  border-radius: 50%;
+  border: 2px solid #d1d9e6;
+  bottom: 16px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 20px;
+  transition: all 0.3s;
+  width: 50px;
+  z-index: 100;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+}
+.el-page-top a {
+  color: #00244d;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  width: 50px;
+}
+
+.el-page-top.is-scroll-active {
+  bottom: 32px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.el-horizontal__card {
+  background-color: #e6e7ee;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  border: 1px solid #d1d9e6;
+  text-align: center;
+}
+
+/* --------------------------------
+*  heading
+* -------------------------------- */
+.el-title--a {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 48px;
+}
+.el-title--a::before, .el-title--a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #00244d;
+}
+.el-title--a::before {
+  margin-right: 20px;
+}
+.el-title--a::after {
+  margin-left: 20px;
+}
+
+.el-title--b {
+  border-bottom: solid #e5bb09;
+  display: inline-flex;
+  font-size: 2rem;
+}
+
+/* //////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+[pages] 
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////// */
+#topMain {
+  align-items: center;
+  border-radius: 48px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
+@media screen and (max-width: 1199px) {
+  #topMain {
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+#topMain .topMain__slider__img > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(70%);
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.topAbout {
+  text-align: center;
+}
+.topAbout .topAbout__slogan {
+  margin-bottom: 36px;
+}
+.topAbout .topAbout__slogan .brand__name {
+  font-size: 2.625rem;
+  position: relative;
+  display: block;
+  margin-bottom: 42px;
+}
+.topAbout .topAbout__slogan .brand__name:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  /*線の上下位置*/
+  display: inline-block;
+  width: 60px;
+  /*線の長さ*/
+  height: 5px;
+  /*線の太さ*/
+  transform: translateX(-50%);
+  /*位置調整*/
+  background-color: #e5bb09;
+  /*線の色*/
+  border-radius: 2px;
+  /*線の丸み*/
+}
+.topAbout .topAbout__slogan .brand__concept {
+  font-size: 1.5rem;
+  display: block;
+}
+.topAbout .topAbout__detail > p {
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+}
+
+.topWorks .circle__icon {
+  margin-bottom: 16px;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+  border: 1px solid #d1d9e6;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 44px;
+}
+.topWorks__card03 {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  width: calc(100% / 3);
+  padding: 32px;
+}
+@media screen and (max-width: 767px) {
+  .topWorks__card03 {
+    width: 100%;
+  }
+}
+.topWorks__card03 .card__body .card__title {
+  margin-bottom: 10px;
+}
+.topWorks__card03 .card__body .card__copy {
+  text-align: left;
+}
+
+.topPortfolio__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.topPortfolio__image--tile {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  flex-grow: 1;
+  width: calc(100% / 3);
+}
+@media screen and (max-width: 1199px) {
+  .topPortfolio__image--tile {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .topPortfolio__image--tile {
+    width: 100%;
+  }
+}
+.topPortfolio__image__Bx {
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  border-radius: 24px;
+  padding: 16px;
+}
+.topPortfolio__image__Bx > img {
+  border-radius: 16px;
+  position: relative;
+}

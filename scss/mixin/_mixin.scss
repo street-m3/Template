@@ -1,0 +1,18 @@
+//breakpoint
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq($breakpoint: tmd) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq($breakpoint: lg) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

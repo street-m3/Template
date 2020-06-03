@@ -1,0 +1,12 @@
+.el-horizontal__card {
+    background-color: $color-bg-primary;
+    // border: 2px solid $color-border-primary;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    @include box-shadow;
+    border: 1px solid $color-border-primary;
+    text-align: center;
+}
+

@@ -1,0 +1,72 @@
+/*
+Theme Name: site-name
+Theme URI: tkjunichi_@
+Author: JUNICHI TAKABATAKE
+Description:  オリジナルテーマ
+Version: 1.0.0
+*/
+
+@charset "utf-8";
+
+
+/* --------------------------------------------------
+    0. Resetting default margin and padding
+-------------------------------------------------- */
+
+@import "./scss/setting/config";
+
+@import "./scss/setting/color";
+
+@import "./scss/setting/fonts";
+
+@import "./scss/setting/function";
+
+@import "./scss/mixin/mixin";
+
+@import "./scss/base/reset";
+
+/* //////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+[Base] 
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////// */
+
+@import "./scss/base/base";
+
+// [Utility]
+@import "./scss/base/utility";
+
+/* //////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+[module] 
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////// */
+
+// [header] 
+@import "./scss/module/Block/header";
+
+@import "./scss/module/Block/gNav";
+
+// [header-spNav] 
+@import "./scss/module/Block/spNav";
+
+// [sidebar] 
+@import "./scss/module/Block/sidebar";
+
+// [footer] 
+@import "./scss/module/Block/footer";
+
+@import "./scss/module/Element/topBtn";
+
+@import "./scss/module/Element/card";
+
+@import "./scss/module/Element/heading";
+
+/* //////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+[pages] 
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////// */
+
+//front-pages
+@import "./scss/project/001--front-page/001--topMain";

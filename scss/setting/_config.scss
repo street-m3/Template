@@ -1,0 +1,33 @@
+////////////////////////////////////
+// PC-LAYOUT-CONTAINER
+////////////////////////////////////
+$layout-pc-inner: 1200px;
+
+////////////////////////////////////
+// BREAK-POINT-LIST
+////////////////////////////////////
+
+$breakpoints: (
+    //default = @media (max-width 575px) => padding 15px
+    "sm": "screen and (min-width: 576px)",
+    "md": "screen and (min-width: 992px)",
+    "lg": "screen and (min-width: #{$layout-pc-inner})"
+) !default;
+
+////////////////////////////////////
+// HOVER-EFFECT
+////////////////////////////////////
+//OPACITY
+$opacity: 0.6;
+
+////////////////////////////////////
+// OTHER
+////////////////////////////////////
+
+//画像imgディレクトリ
+$imgDir: './images/';
+
+//UNDER-LINE
+$color-under-line: #e5bb09;
+
+

@@ -1,0 +1,39 @@
+//flex
+.u-flex {
+    display: flex;
+}
+
+.u-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.u-flex-bet {
+    justify-content: space-between;
+}
+
+.u-flex-center {
+    justify-content: center;
+}
+
+.u-flex-none {
+    display: block !important;
+}
+
+.u-under-line {
+    background: linear-gradient(transparent 70%, #e5bb09);
+}
+
+.u-content-area {
+    padding-bottom: 40px;
+}
+
+/* 改行設定 */
+.sp-br {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .sp-br {
+        display: block;
+    }
+}
